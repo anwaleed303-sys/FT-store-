@@ -169,6 +169,8 @@ const CustomerProducts: React.FC = () => {
               justifyContent: "space-between",
               alignItems: "center",
               marginBottom: "40px",
+              flexWrap: "wrap",
+              gap: "16px",
             }}
           >
             <Title
@@ -178,6 +180,7 @@ const CustomerProducts: React.FC = () => {
                 background: "linear-gradient(135deg, #0066FF, #00D4B1)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
+                fontSize: "clamp(20px, 5vw, 32px)",
               }}
             >
               <ShoppingOutlined /> All Products

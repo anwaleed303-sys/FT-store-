@@ -273,42 +273,50 @@ const Checkout: React.FC = () => {
                     </Text>
                   </div>
                 }
-                extra={[
-                  <Button
-                    key="download"
-                    type="primary"
-                    size="large"
-                    icon={<DownloadOutlined />}
-                    onClick={generatePDF}
+                extra={
+                  <div
                     style={{
-                      background: "linear-gradient(135deg, #0066FF, #00D4B1)",
-                      border: "none",
-                      borderRadius: "8px",
-                      height: "50px",
-                      fontSize: "16px",
-                      fontWeight: "bold",
-                      marginRight: "12px",
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: "12px",
+                      justifyContent: "center",
                     }}
                   >
-                    Download Bill PDF
-                  </Button>,
-                  <Button
-                    key="continue"
-                    size="large"
-                    icon={<ShoppingOutlined />}
-                    onClick={() => router.push("/customer/products")}
-                    style={{
-                      borderRadius: "8px",
-                      height: "50px",
-                      fontSize: "16px",
-                      fontWeight: "bold",
-                      border: "2px solid #0066FF",
-                      color: "#0066FF",
-                    }}
-                  >
-                    Continue Shopping
-                  </Button>,
-                ]}
+                    <Button
+                      key="download"
+                      type="primary"
+                      size="large"
+                      icon={<DownloadOutlined />}
+                      onClick={generatePDF}
+                      style={{
+                        background: "linear-gradient(135deg, #0066FF, #00D4B1)",
+                        border: "none",
+                        borderRadius: "8px",
+                        height: "50px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      Download Bill PDF
+                    </Button>
+                    <Button
+                      key="continue"
+                      size="large"
+                      icon={<ShoppingOutlined />}
+                      onClick={() => router.push("/customer/products")}
+                      style={{
+                        borderRadius: "8px",
+                        height: "50px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        border: "2px solid #0066FF",
+                        color: "#0066FF",
+                      }}
+                    >
+                      Continue Shopping
+                    </Button>
+                  </div>
+                }
               />
             </Card>
           </div>
